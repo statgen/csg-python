@@ -147,7 +147,7 @@ To make this always the case:
 
 Then logout and log back in. 
 
-To temporarily do this with `bash`, just run:
+To modify $HOME for only your current session (ie, until you log out or disconnect), run:
 
 - on `bash`:
 
@@ -164,6 +164,6 @@ To temporarily do this with `bash`, just run:
     ```
 
 You will have to remember to do this before you ever do `brew install
-...` or `conda install ...`, though.
+...` or `conda install ...`, though, or else nasty problems can occur.
 
 
