@@ -1,6 +1,6 @@
 # Installing the latest version of python3
 
-## Know which shell you are using
+## 1. Know which shell you are using
 
 For our cluster, you may be using either <span style='color: darkorange'>bash</span> or <span style='color: #663399'>tcsh</span> shell. To check
 which you are using, run: 
@@ -9,7 +9,7 @@ which you are using, run:
 echo $SHELL
 ```
 
-## Before installing either linuxbrew or miniconda
+## 2. Check that your $HOME is shared across the cluster
 
 Run: 
 
@@ -17,9 +17,13 @@ Run:
 echo $HOME
 ```
 
-If the result does not begin with `/net/`, <a href="#dealing-with-home-not-on-net">follow the instructions for "dealing with HOME not on /net/" below</a> before continuing.
+If the result does not begin with `/net/`, [follow the instructions for "dealing with HOME not on /net/" below](#dealing-with-home-not-on-net"] before continuing.
 
-## Miniconda (recommended)
+## 3. Choose between Miniconda and Linuxbrew
+
+Miniconda is a bit simpler, so we recommend it.  Linuxbrew helps with installing the latest versions of any other packages you might need, and is also quite easy to use.  Continue to [instructions for Miniconda](#miniconda) or [instructions for Linuxbrew](#linuxbrew).
+
+## Miniconda
 
 [Miniconda](https://conda.io/miniconda.html) is a lightweight version of
 Anaconda that installs just python and the conda package manager. It is
@@ -53,7 +57,7 @@ example:
 conda install numpy pandas
 ```
 
-## Linuxbrew (alternative)
+## Linuxbrew
 
 [Linuxbrew](http://linuxbrew.sh/) not only allows you to install a
 recent version of python, it allows you to compile and install many
