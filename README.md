@@ -16,7 +16,7 @@ Run:
 echo $HOME
 ```
 
-If the result does not begin with `/net/`, [follow the instructions for "dealing with HOME not on /net/" below](#dealing-with-home-not-on-net] before continuing.
+If the result does not begin with `/net/`, [follow the instructions for "dealing with HOME not on /net/" below](#dealing-with-home-not-on-net) before continuing.
 
 ## 3. Choose between Miniconda and Linuxbrew
 
@@ -43,8 +43,10 @@ $PATH simultaneously.
 
 Download the latest [64-bit Linux installer for python3](https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh)
 and then follow the [quick install](https://conda.io/docs/install/quick.html#linux-miniconda-install).
+Press "q" when you're done reading the terms and conditions and then simple press &lt;enter&gt; at each prompt to accept the defaults.
 
-- If you are using bash, the installer should offer to change your $PATH automatically.
+
+- If you are using bash, the installer will change your $PATH automatically by modifying `~/.bash_profile`.
 
 - If you are using tcsh, add the following to your `.cshrc`:
 
