@@ -28,7 +28,7 @@ available for all platforms (Win, Mac, and Linux.)
 ### Installing
 
 Download the latest [64-bit Linux
-installer for python 3](https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh)
+installer for python3](https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh)
 and then follow the [quick
 install](https://conda.io/docs/install/quick.html#linux-miniconda-install). 
 
@@ -76,7 +76,7 @@ If you are using <span style='color: darkorange'>bash</span>, linuxbrew can auto
 correctly by adding the proper command to your `.bashrc` file. 
 
 If you are using <span style='color: #663399'>tcsh</span>, you will need to set your PATH by adding the
-following to your `.cshrc` in your home: 
+following to your `.cshrc` in your $HOME: 
 
 ```bash
 setenv PATH "/net/<machine>/home/<user>/.linuxbrew/bin:${PATH}"
@@ -147,12 +147,21 @@ To make this always the case:
 
 Then logout and log back in. 
 
-To temporarily do this (with `bash`), just run:
+To temporarily do this with `bash`, just run:
 
-```bash
-export HOME=/net/<machine>/home/<me>
-cd $HOME
-```
+- on `bash`:
+
+    ```bash
+    export HOME=/net/<machine>/home/<me>
+    cd $HOME
+    ```
+
+- on `tcsh`:
+
+    ```bash
+    setenv HOME /net/<machine>/home/<me>
+    cd $HOME
+    ```
 
 You will have to remember to do this before you ever do `brew install
 ...` or `conda install ...`, though.
