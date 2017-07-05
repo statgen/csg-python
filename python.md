@@ -105,8 +105,13 @@ pip3 install pandas numpy scipy statsmodels cython numba
 You don't need `sudo` or `--user` since your python3 is installed under
 linuxbrew in your home directory. 
 
+<br>
 
-## details
+<br>
+
+---
+
+## more instructions
 
 ### dealing with HOME not on /net/
 
