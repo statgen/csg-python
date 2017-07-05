@@ -20,7 +20,7 @@ If the result starts with `/net/`, you're fine.
 
 If the result starts with `/home/` or `/exports/`, [follow the instructions for "dealing with HOME not on /net/" below](#dealing-with-home-not-on-net) before continuing.
 
-## 3. Choose between Miniconda and Linuxbrew
+## 3. Choose either Miniconda or Linuxbrew
 
 We recommend Miniconda because it is simpler than Linuxbrew, but both are quite easy to use.
 
