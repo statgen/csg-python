@@ -17,7 +17,7 @@ Run:
 echo $HOME
 ```
 
-If the result does not begin with `/net/`, <a href="#dealing-with-HOME-not-on-net">follow the instructions for "dealing with HOME not on /net/" below</a> before continuing.
+If the result does not begin with `/net/`, <a href="#dealing-with-home-not-on-net">follow the instructions for "dealing with HOME not on /net/" below</a> before continuing.
 
 ## Miniconda (recommended)
 
