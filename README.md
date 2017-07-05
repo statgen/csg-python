@@ -20,15 +20,21 @@ If the result does not begin with `/net/`, [follow the instructions for "dealing
 
 ## 3. Choose between Miniconda and Linuxbrew
 
-Miniconda is a bit simpler, so we recommend it.  Linuxbrew helps with installing the latest versions of any other packages you might need, and is also quite easy to use.  Continue to [instructions for Miniconda](#miniconda) or [instructions for Linuxbrew](#linuxbrew).
+We recommend Miniconda because it is simpler than Linuxbrew, but both are quite easy to use.
+
+[Miniconda](https://conda.io/miniconda.html) is a lightweight version of Anaconda that installs just python and the conda package manager. It is available for all platforms (Windows, Mac, and Linux). To install it, continue to [instructions for Miniconda](#miniconda).
+
+[Linuxbrew](http://linuxbrew.sh/) not only allows you to install a
+recent version of python, it allows you to compile and install many
+other programs and libraries. You can install the latest version of tmux, git, R, pandoc, samtools, pretty much anything.  Linuxbrew compiles from source, and as such it can take several minutes to install some programs depending on how many dependencies they have.  To install it, continue to [instructions for Linuxbrew](#linuxbrew).
+
+You may encounter issues having both linuxbrew and miniconda on your
+$PATH simultaneously.
+
 
 ## Miniconda
 
-[Miniconda](https://conda.io/miniconda.html) is a lightweight version of
-Anaconda that installs just python and the conda package manager. It is
-available for all platforms (Windows, Mac, and Linux).
-
-### Installing
+### Installing Miniconda
 
 Download the latest [64-bit Linux installer for python3](https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh)
 and then follow the [quick install](https://conda.io/docs/install/quick.html#linux-miniconda-install).
@@ -57,19 +63,8 @@ conda install numpy pandas
 
 ## Linuxbrew
 
-[Linuxbrew](http://linuxbrew.sh/) not only allows you to install a
-recent version of python, it allows you to compile and install many
-other programs and libraries. You can install a recent version of tmux,
-git, gpg, R, pretty much anything.
 
-Linuxbrew compiles from source, and as such it can take some
-time to install various programs depending on how many dependencies they
-have.
-
-You may encounter issues having both linuxbrew and miniconda on your
-$PATH simultaneously.
-
-### Installing linuxbrew
+### Installing Linuxbrew
 
 Follow the [installation
 instructions](http://linuxbrew.sh/#install-linuxbrew) to get started.
@@ -84,7 +79,7 @@ following to your `.cshrc` in your $HOME:
     setenv PATH "/net/<machine>/home/<user>/.linuxbrew/bin:${PATH}"
     ```
 
-### Installing python
+### Installing Python3
 
 Now you should be able to run the following:
 
