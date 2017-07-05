@@ -28,11 +28,10 @@ We recommend Miniconda because it is simpler than Linuxbrew, but both are quite 
 It is available for all platforms (Windows, Mac, and Linux).
 To install it, continue to [instructions for Miniconda](#miniconda).
 
-[Linuxbrew](http://linuxbrew.sh/) not only allows you to install a
-recent version of python, it allows you to compile and install many
-other programs and libraries.
-You can install the latest version of tmux, git, R, pandoc, samtools, pretty much anything.
-Linuxbrew compiles from source, and as such it can take several minutes to install some programs depending on how many dependencies they have.
+[Linuxbrew](http://linuxbrew.sh/) can install the latest version of python, 
+and many other programs and libraries.
+You can install the latest version of tmux, git, R, pandoc, samtools, or any of 5000 other packages.
+Linuxbrew compiles from source, and as such it can take more than ten minutes to install some programs if they depend on many other packages.
 To install it, continue to [instructions for Linuxbrew](#linuxbrew).
 
 You may encounter issues having both linuxbrew and miniconda on your
@@ -172,6 +171,6 @@ work everywhere this way.
         cd $HOME
         ```
 
-    You will have to remember to do this before you ever do `brew install ...` or `conda install ...`, though, or else nasty problems can occur.
+    You will have to remember to do this each time you log in before you running `brew install ...` or `conda install ...`, though, or else nasty problems can occur.
 
 
