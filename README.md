@@ -16,7 +16,9 @@ Run:
 echo $HOME
 ```
 
-If the result does not begin with `/net/`, [follow the instructions for "dealing with HOME not on /net/" below](#dealing-with-home-not-on-net) before continuing.
+If the result starts with `/net/`, you're fine.
+
+If the result starts with `/home/` or `/exports/`, [follow the instructions for "dealing with HOME not on /net/" below](#dealing-with-home-not-on-net) before continuing.
 
 ## 3. Choose between Miniconda and Linuxbrew
 
