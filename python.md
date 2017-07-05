@@ -32,17 +32,17 @@ installer for python3](https://repo.continuum.io/miniconda/Miniconda3-latest-Lin
 and then follow the [quick
 install](https://conda.io/docs/install/quick.html#linux-miniconda-install). 
 
-The installer should offer to change your PATH automatically if you are
-using <span style='color: darkorange'>bash</span>.
+- On <span style='color: darkorange'>bash</span>, the installer should offer to change your PATH automatically.
 
-If you are using <span style='color: #663399'>tcsh</span>, you will need
-to add the following to your `.cshrc`: 
+- On <span style='color: #663399'>tcsh</span>, you will need to add the following to your `.cshrc`: 
 
-```bash
-setenv PATH "/net/<machine>/home/<user>/miniconda3/bin:${PATH}"
-```
+    ```bash
+    setenv PATH "/net/<machine>/home/<user>/miniconda3/bin:${PATH}"
+    ```
 
-Now `source $HOME/.cshrc` or logout/back in. 
+    Then run `source $HOME/.cshrc` or logout and log back in. 
+
+By default, Miniconda makes `python` refer to `python3`.  This can break legacy programs.  We recommend that you run `rm ~/miniconda3/bin/python` so that `python` will still refer to `python2`.  If you want python3, run `python3`.
 
 ### Packages
 
@@ -65,37 +65,36 @@ time to install various programs depending on how many dependencies they
 have. 
 
 You may encounter issues having both linuxbrew and miniconda on your
-PATH simultaneously. 
+$PATH simultaneously. 
 
 ### Installing linuxbrew
 
 Follow the [installation
 instructions](http://linuxbrew.sh/#install-linuxbrew) to get started. 
 
-If you are using <span style='color: darkorange'>bash</span>, linuxbrew can automatically set your PATH
+- If you are using <span style='color: darkorange'>bash</span>, linuxbrew can automatically set your PATH
 correctly by adding the proper command to your `.bashrc` file. 
 
-If you are using <span style='color: #663399'>tcsh</span>, you will need to set your PATH by adding the
+- If you are using <span style='color: #663399'>tcsh</span>, you will need to set your PATH by adding the
 following to your `.cshrc` in your $HOME: 
 
-```bash
-setenv PATH "/net/<machine>/home/<user>/.linuxbrew/bin:${PATH}"
-```
+    ```bash
+    setenv PATH "/net/<machine>/home/<user>/.linuxbrew/bin:${PATH}"
+    ```
 
 ### Installing python
 
-Now you should be able to do the following (log out and back in or
-`source $HOME/.bashrc` first): 
+Now you should be able to run the following: 
 
 ```bash
 brew install python3
 ```
 
-This should take a little while (brew compiles everything from scratch.) 
+This should take a little while because brew compiles everything from scratch.
 
 ### Packages
 
-Now you can install python packages with pip3, which was included when
+Now you can install python3 packages with pip3, which was included when
 you installed python3. For example: 
 
 ```bash
