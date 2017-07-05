@@ -3,7 +3,7 @@
 ## Know which shell you are using
 
 For our cluster, you may be using either <span style='color: darkorange'>bash</span> or <span style='color: #663399'>tcsh</span> shell. To check
-which you are using, do: 
+which you are using, run: 
 
 ```bash
 echo $SHELL
@@ -11,47 +11,13 @@ echo $SHELL
 
 ## Before installing either linuxbrew or miniconda
 
-Quickly do: 
+Run: 
 
 ```bash
 echo $HOME
 ```
 
-If it begins with `/net/...`, <span style='color: red'>then you can skip
-the rest of this section.</span> Most people should fall into this camp. 
-
-For folks whose home directories do not automatically include
-`/net/...`, you should ensure that you are sitting in your home
-directory, and that it is prefixed by `/net/<machine>/...`, and that
-your `$HOME` is also set to that directory. This makes life much easier
-when working with the cluster - your linuxbrew compiled binaries will
-work everywhere this way.
-
-To make this always the case: 
-
-1. Put the following at the top of your `.bashrc`: 
-
-    ```bash
-    export HOME=/net/<machine>/home/<me>
-    ```
-
-2. And the following at the bottom of your `.bash_profile`:
-
-    ```bash
-    cd $HOME
-    ```
-
-Then logout/back in. 
-
-To temporarily do this, just do: 
-
-```bash
-export HOME=/net/<machine>/home/<me>
-cd $HOME
-```
-
-You will have to remember to do this before you ever do `brew install
-...`, though. 
+If the result does not begin with `/net/`, <a href="#dealing-with-HOME-not-on-net">follow the instructions for "dealing with HOME not on /net/" below</a> before continuing.
 
 ## Miniconda (recommended)
 
@@ -138,4 +104,57 @@ pip3 install pandas numpy scipy statsmodels cython numba
 
 You don't need `sudo` or `--user` since your python3 is installed under
 linuxbrew in your home directory. 
+
+
+## details
+
+### dealing with HOME not on /net/
+
+If the result of 
+
+```bash
+echo $HOME
+```
+
+does not begin with `/net/`, you will have trouble running your newly 
+installed python3 on the nodes on the cluster. It will still work fine 
+on the machine where you install it, but we recommend against it.
+
+For folks whose home directories do not automatically include
+`/net/...`, you should ensure that you are sitting in your home
+directory, and that it is prefixed by `/net/<machine>/...`, and that
+your `$HOME` is also set to that directory. This makes life much easier
+when working with the cluster - your binaries compiled by miniconda and linuxbrew will
+work everywhere this way.
+
+To make this always the case:
+
+- If `echo $SHELL` contains `bash`, then:
+
+    1. Put the following at the top of your `.bashrc`: 
+
+        ```bash
+        export HOME=/net/<machine>/home/<me>
+        ```
+
+    2. And the following at the bottom of your `.bash_profile`:
+
+        ```bash
+        cd $HOME
+        ```
+
+- If `echo $SHELL` contains `tcsh`, then ask somebody for help.
+
+Then logout and log back in. 
+
+To temporarily do this (with `bash`), just run:
+
+```bash
+export HOME=/net/<machine>/home/<me>
+cd $HOME
+```
+
+You will have to remember to do this before you ever do `brew install
+...` or `conda install ...`, though.
+
 
