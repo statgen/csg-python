@@ -42,31 +42,44 @@ $PATH simultaneously.
 
 ### Installing Miniconda
 
-Download the latest [64-bit Linux installer for python3](https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh)
-and then follow the [quick install](https://conda.io/docs/install/quick.html#linux-miniconda-install).
-Press "q" when you're done reading the terms and conditions and then simple press &lt;enter&gt; at each prompt to accept the defaults.
+(The official install instructions are [here](https://conda.io/docs/install/quick.html#linux-miniconda-install).  Below is how we recommend installing miniconda3.)
 
+Run:
 
-- If you are using bash, the installer will change your $PATH automatically by modifying `~/.bash_profile`.
+```
+curl https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh > install-miniconda3.sh
+bash install-miniconda3.sh
+```
+
+Type &lt;enter&gt; to view the terms & conditions.  When you're done with them, type "q" to close them, and then "yes" &lt;enter&gt; to accept them.
+
+Type &lt;enter&gt; to agree to the path `~/miniconda3`.
+
+Next,
+
+- If you are using bash, type "yes" and &lt;enter&gt; to let have miniconda modify `$PATH` in your `~/.bash_profile` or `~/.bashrc`.
 
 - If you are using tcsh, add the following to your `.cshrc`:
 
-    ```bash
-    setenv PATH "/net/<machine>/home/<user>/miniconda3/bin:${PATH}"
-    ```
+  ```bash
+  setenv PATH "/net/<machine>/home/<user>/miniconda3/bin:${PATH}"
+  ```
 
-    Then run `source $HOME/.cshrc` or logout and log back in.
+Miniconda3 makes `python` an alias for `python3` and `pip` an alias for `pip3`.
+The developers of python [recommend against that behavior](https://www.python.org/dev/peps/pep-0394/), because it's likely to cause problems.
+To make `python` and `pip` refer to `python2` and `pip2`, I recommend running:
 
-By default, Miniconda makes `python` refer to `python3`.  This can break legacy programs.
-We recommend that you run `rm ~/miniconda3/bin/python` so that `python` will still refer to `python2`.
-If you want python3, run `python3`.
+```bash
+rm ~/miniconda3/bin/python
+rm ~/miniconda3/bin/pip
+```
 
 ### Packages
 
 You can install python packages using `conda` or `pip3` now. For example:
 
 ```bash
-conda install numpy pandas
+pip3 install numpy pandas
 ```
 
 ## Linuxbrew
