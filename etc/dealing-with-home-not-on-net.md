@@ -1,4 +1,4 @@
-### dealing with HOME not on /net/
+## dealing with HOME not on /net/
 
 If the result of
 
