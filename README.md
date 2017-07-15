@@ -66,8 +66,8 @@ Next,
   ```
 
 Miniconda3 makes `python` an alias for `python3` and `pip` an alias for `pip3`.
-The developers of python [recommend against that behavior](https://www.python.org/dev/peps/pep-0394/), because it's likely to cause problems.
-To make `python` and `pip` refer to `python2` and `pip2`, I recommend running:
+The developers of python [recommend against that behavior](https://www.python.org/dev/peps/pep-0394/), because many scripts expect `python` to refer to `python2` and will break otherwise.
+To make `python` and `pip` refer to `python2` and `pip2` (like they do without miniconda3 installed), I recommend running:
 
 ```bash
 rm ~/miniconda3/bin/python
